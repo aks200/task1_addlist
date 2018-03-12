@@ -16,22 +16,28 @@ add=function(){
         
         let li=document.createElement("li");
         li.textContent=v;
-        ul.append(li)
+        ul.append(li);
+        //alert(li.innerText);
     }
 }
 
-list=function(event){
-    alert("entered");
 
-    if(event.Target.tagName == "li"){
-        alert("target entered");
-        alert(li.innerText);
-    }
 
-    else{
-        return;
-    }
-}
+//using jquery...
+$( document ).ready(function() {
+    $(".list").on('click','li',function() {
+    alert($(this).text());
+    });
+});
+
+
+
+    
+
+
+
+
+
     
 
     
